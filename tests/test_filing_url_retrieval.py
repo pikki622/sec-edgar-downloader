@@ -186,7 +186,7 @@ def test_all_supported_filings(
         pytest.fail(f"EdgarSearchApiError was raised for {filing_type} filing.")
     else:
         # AAPL may or may not file certain filings
-        assert len(filings_to_download) == 0 or len(filings_to_download) == 1
+        assert len(filings_to_download) in {0, 1}
 
 
 def test_fetch_zero_filings(
