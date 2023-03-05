@@ -35,7 +35,7 @@ def test_invalid_ticker(downloader):
     # invalid tickers will result in 0 filings
     # so intermediate folders will not be created
     assert num_filings_downloaded == 0
-    assert len(list(dl_path.glob("*"))) == 0
+    assert not list(dl_path.glob("*"))
 
     filings_save_path = dl_path / ROOT_SAVE_FOLDER_NAME
     assert not filings_save_path.exists()

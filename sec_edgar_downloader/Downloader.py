@@ -110,7 +110,7 @@ class Downloader:
             # Get all SD filings for Apple
             >>> dl.get("SD", "AAPL")
         """
-        ticker_or_cik = str(ticker_or_cik).strip().upper()
+        ticker_or_cik = ticker_or_cik.strip().upper()
 
         # Check for blank tickers or CIKs
         if not ticker_or_cik:

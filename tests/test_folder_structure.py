@@ -32,7 +32,7 @@ def test_file_structure(downloader):
     dl, dl_path = downloader
     filings_save_path = dl_path / ROOT_SAVE_FOLDER_NAME
 
-    assert len(list(dl_path.glob("**/*"))) == 0
+    assert not list(dl_path.glob("**/*"))
 
     # Verify AAPL 8-K download
     ticker = "AAPL"
